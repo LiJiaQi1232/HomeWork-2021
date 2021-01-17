@@ -1,0 +1,51 @@
+/**index.wxss**/
+SearchInput {
+  width: 100%;
+}
+
+swiper{
+  width: 750rpx;
+  height: 340rpx;
+}
+
+.index_swiper navigator image {
+  width: 100%;
+}
+.index_cates{
+  width: 100%;
+  display: flex;
+}
+.index_cates navigator{
+  padding: 10rpx 20rpx;
+  flex: 1;
+}
+.index_cates navigator image{
+  width: 100%;
+}
+
+.index_floor{
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.index_floor_img{
+  overflow: hidden;
+}
+.index_floor_img navigator{
+  float: left;
+  width: 33.33%;
+}
+.index_floor_img navigator:nth-child(n+2){
+  border-left: 10rpx solid #fff;
+  height: 26.5vw;
+  box-sizing: border-box;
+}
+.index_floor_img navigator:nth-child(2),
+.index_floor_img navigator:nth-child(3){
+  border-bottom: 10rpx solid #fff;
+}
+
+.index_floor_img navigator image{
+  width: 100%;
+  height: 100%;
+}

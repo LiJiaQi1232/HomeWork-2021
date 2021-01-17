@@ -1,0 +1,38 @@
+<!--index.wxml-->
+<!--首页-->
+<view class="container">
+<!-- 搜索框 start -->
+  <search></search>
+  <!-- 搜索框 end -->
+
+  <!-- 轮播图 start -->
+  <view class="index_swiper">
+    <swiper indicator-dots autoplay circular>
+      <swiper-item wx:for="{{swiperList}}" wx:key="goods_id">
+        <navigator>
+          <image mode="widthFix" src="{{item.image_src}}"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+    <!-- 轮播图 end -->
+
+  <!-- 分类 start -->
+  <view class="index_cates">
+    <navigator wx:for="{{catesList}}" wx:key="name">
+      <image mode="widthFix" src="{{item.image_src}}"></image>
+    </navigator>
+  </view>
+    <!-- 分类 end -->
+
+  <!-- 楼层 start-->
+  <view class="index_floor" wx:for="{{floorList}}">
+    <image mode="widthFix" src="{{item.floor_title.image_src}}"></image>
+    <view class="index_floor_img">
+      <navigator wx:for="{{item.product_list}}" wx:for-index="index">
+      <image mode="{{index==0?'widthFix':'scaleToFill'}}" src="{{item.image_src}}"></image>
+    </navigator>
+    </view>
+  </view>
+    <!-- 楼层 end-->
+</view>
